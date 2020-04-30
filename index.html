@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="./assets/libs/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="./assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/libs/highlight.js/styles/vs2015.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme-dark.min.css" id="stylesheetDark">
+
+    <style>
+    body { display: none; }
+    </style>
+
+
+    <title>ScheduleOnce Form Demo</title>
+  </head>
+  <body class="d-flex align-items-center bg-auth border-top border-top-2 border-primary">
+
+    <!-- NAVBAR
+    ================================================== -->
+
+    <nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md navbar-transparent border-0">
+      <a class="navbar-brand" href="index.html">
+        <img src="./assets/img/branding/logo4.png" class="navbar-brand-img
+        mx-auto" alt="..."  style="max-width:100px;max-height:100px">
+      </a>
+    </nav>
+
+    <!-- CONTENT
+    ================================================== -->
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-md-5 col-lg-6 col-xl-5 px-lg-6 my-5">
+
+          <!-- Heading -->
+          <h1 class="display-4 text-center mb-3">
+            Book a demo
+          </h1>
+
+          <!-- Subheading -->
+          <p class="text-muted text-center mb-5">
+            Get to know Baseflow by seeing it in action.
+          </p>
+
+          <!-- Form -->
+          <form id="demo-form">
+
+            <!-- Name -->
+            <div class="form-group">
+
+              <div class="row">
+                <div class="col">
+
+                  <!-- Label -->
+                  <label>Name</label>
+
+                </div>
+              </div> <!-- / .row -->
+
+              <!-- Input group -->
+              <div class="input-group input-group-merge">
+
+                <!-- Input -->
+                <input id="name" type="text" class="form-control" placeholder="Alan">
+
+              </div>
+
+            </div>
+
+            <!-- Email address -->
+            <div class="form-group">
+
+              <!-- Label -->
+              <label>Email</label>
+
+              <!-- Input -->
+              <input id="email" type="email" class="form-control" placeholder="alanwellik@gmail.com">
+
+            </div>
+
+            <!-- 2 input row (company and budget) -->
+            <div class="form-row">
+              <div class="col-12 col-md-6 mb-3">
+                <!-- Company -->
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col">
+
+                      <!-- Label -->
+                      <label>Company</label>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Input group -->
+                  <div class="input-group input-group-merge">
+
+                    <!-- Input -->
+                    <input id="company" type="text" class="form-control" placeholder="ACC">
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                <!-- Budget -->
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col">
+
+                      <!-- Label -->
+                      <label>Budget</label>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Input group -->
+                  <div class="input-group input-group-merge">
+                    <select id="budget" form="demo-form" class="form-control" data-toggle="select">
+                      <option disabled selected>Select your budget</option>
+                      <option>Under $1000</option>
+                      <option>$1000 to $5000</option>
+                      <option>$5000 to $10000</option>
+                      <option>Over $10000</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-lg btn-block btn-primary mb-3 mt-2">
+              Submit
+            </button>
+
+          </form>
+
+        </div>
+        <div class="col-12 col-md-7 col-lg-6 col-xl-7 d-none d-lg-block">
+
+          <!-- Image -->
+          <div class="bg-cover vh-100 mt-n1 mr-n3" style="background-image: url(assets/img/covers/sidebar-cover.jpg);"></div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+    <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="./assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="./assets/libs/list.js/dist/list.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="./assets/libs/chart.js/Chart.extension.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="./assets/js/select2.js"></script>
+
+    <!-- Redirect JS -->
+    <script src="./assets/js/redirect.js"></script>
+
+  </body>
+</html>
