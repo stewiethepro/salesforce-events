@@ -19,7 +19,7 @@
     </style>
 
 
-    <title>Salesforce Events Demo</title>
+    <title>ScheduleOnce Form Demo</title>
   </head>
   <body class="d-flex align-items-center bg-auth border-top border-top-2 border-primary">
 
@@ -32,26 +32,15 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-12 col-md-5 col-lg-6 col-xl-5 px-lg-6 my-5">
 
-          <!-- Connection-Scheduler -->
-          <div id="connection-SO-container" class="row align-items-center justify-content-center" style="display:none">
+          <div id="SO-container" class="row align-items-center justify-content-center" style="display:none">
             <!-- ScheduleOnce embed START -->
-            <div id="SOIDIV_connectionSF" data-so-page="connectionSF" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="01"></div>
+            <div id="SOIDIV_ANRDiscoveryCall" data-so-page="ANRDiscoveryCall" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="11"></div>
+            <script type="text/javascript" src="./assets/js/bookingPage.js"></script>
             <script type="text/javascript" src="https://cdn.oncehub.com/mergedjs/so.js"></script>
             <!-- ScheduleOnce embed END -->
           </div>
-          <!-- Connection-Scheduler END -->
 
-          <!-- Future-Scheduler -->
-          <div id="future-SO-container" class="row align-items-center justify-content-center" style="display:none">
-            <!-- ScheduleOnce embed START -->
-            <div id="SOIDIV_futureSF" data-so-page="futureSF" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="01"></div>
-            <script type="text/javascript" src="https://cdn.oncehub.com/mergedjs/so.js"></script>
-            <!-- ScheduleOnce embed END -->
-          </div>
-          <!-- Future-Scheduler END -->
-
-          <!-- Events Container -->
-          <div id="events-container">
+          <div id="form-container">
             <!-- Salesforce Logo -->
             <div class="row align-items-center justify-content-center">
               <a class="navbar-brand" href="index.html">
@@ -69,68 +58,100 @@
               Join us for a speaker series created to help business leaders navigate this challenging time.
             </p>
 
-            <!-- Events -->
-            <!-- Event 1 -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
+            <!-- Form -->
+            <form id="demo-form">
 
-                  <div class="col ml-n2">
+              <!-- Name -->
+              <div class="form-group">
 
-                    <!-- Heading -->
-                    <h4 class="mb-1">
-                      <a href="team-overview.html">Connection as the Cure</a>
-                    </h4>
+                <div class="row">
+                  <div class="col">
 
-
-                    <!-- Time -->
-                    <small class="text-muted">
-                      May 7th, 2020 <br>1pm PST
-                    </small>
+                    <!-- Label -->
+                    <label>Name</label>
 
                   </div>
+                </div> <!-- / .row -->
 
-                  <!-- Button -->
-                  <div class="col-auto mr-n2">
-                    <button id="connection" class="btn btn-primary btn-large" type="button" name="button">Register <span class="fe fe-arrow-right ml-3"></span></button>
+                <!-- Input group -->
+                <div class="input-group input-group-merge">
+
+                  <!-- Input -->
+                  <input id="name" type="text" class="form-control" placeholder="">
+
+                </div>
+
+              </div>
+
+              <!-- Email address -->
+              <div class="form-group">
+
+                <!-- Label -->
+                <label>Email</label>
+
+                <!-- Input -->
+                <input id="email" type="email" class="form-control" placeholder="">
+
+              </div>
+
+              <!-- 2 input row (company and employees) -->
+              <div class="form-row">
+                <div class="col-12 col-md-6 mb-3">
+                  <!-- Company -->
+                  <div class="form-group">
+
+                    <div class="row">
+                      <div class="col">
+
+                        <!-- Label -->
+                        <label>Company</label>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Input group -->
+                    <div class="input-group input-group-merge">
+
+                      <!-- Input -->
+                      <input id="company" type="text" class="form-control" placeholder="">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                  <!-- Employees -->
+                  <div class="form-group">
+
+                    <div class="row">
+                      <div class="col">
+
+                        <!-- Label -->
+                        <label>Employees</label>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Input group -->
+                    <div class="input-group input-group-merge">
+                      <select id="employees" form="demo-form" class="form-control" data-toggle="select">
+                        <option disabled selected></option>
+                        <option>1-15 employees</option>
+                        <option>16-100 employees</option>
+                        <option>101-500 employees</option>
+                        <option>501-2000 employees</option>
+                        <option>2001+ employees</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- END Event 1 -->
 
-            <!-- Events -->
-            <!-- Event 2 -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
+              <!-- Submit -->
+              <button type="submit" class="btn btn-lg btn-block btn-primary mb-3 mt-2">
+                Next
+              </button>
 
-                  <div class="col ml-n2">
-
-                    <!-- Heading -->
-                    <h4 class="mb-1">
-                      <a href="team-overview.html">Future of Healthcare</a>
-                    </h4>
-
-
-                    <!-- Time -->
-                    <small class="text-muted">
-                      May 11th, 2020 <br>10am PST
-                    </small>
-
-                  </div>
-
-                  <!-- Button -->
-                  <div class="col-auto mr-n2">
-                    <button id="future" class="btn btn-primary btn-large" type="button" name="button">Register <span class="fe fe-arrow-right ml-3"></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- END Event 2 -->
-            <!-- END Events -->
-
-
+            </form>
 
           </div>
 

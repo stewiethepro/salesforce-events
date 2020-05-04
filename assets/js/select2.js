@@ -51,7 +51,7 @@
 
   // Hide search bar
   $(document).ready(function() {
-    $("#budget").select2({
+    $("#employees").select2({
       minimumResultsForSearch: Infinity
     });
   });

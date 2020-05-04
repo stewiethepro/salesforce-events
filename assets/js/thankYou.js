@@ -6,7 +6,6 @@ function thankYou(){
 
   var name = url.searchParams.get("Name");
   var email = url.searchParams.get("Email");
-  var company = url.searchParams.get("company");
 
   var nameString = name.split(" ");
   var firstName = nameString[0];
@@ -25,9 +24,10 @@ function thankYou(){
   thankYouMessageBody.innerHTML =
   `
   <p class="text-muted text-center mb-5">
-    We've sent a confirmation email to <strong class="text-white">${email}</strong>.
+    We've sent a confirmation email to <strong class="text-primary">${email}</strong>.
     <br>
-    Looking forward to learning more about your needs at ${company}.
+    <br>
+    See you there!
   </p>
   `
 };
