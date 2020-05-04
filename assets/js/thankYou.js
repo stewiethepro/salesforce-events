@@ -1,6 +1,6 @@
 function thankYou(){
 
-  window.history.replaceState(null, null, "?name=Alan%20Wellik&email=alanwellik%40gmail.com")
+  window.history.replaceState(null, null, "?name=Alan&email=alanwellik%40gmail.com")
   var url_string = window.location.href;
   var decoded = decodeURI(url_string);
   var url = new URL(decoded);
