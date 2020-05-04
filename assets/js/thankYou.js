@@ -1,12 +1,12 @@
 function thankYou(){
 
-  window.history.replaceState(null, null, "?name=Alan&email=alanwellik%40gmail.com")
+  window.history.replaceState(null, null, "?name=Alan%20Wellik&email=alanwellik%40gmail.com")
   var url_string = window.location.href;
   var decoded = decodeURI(url_string);
   var url = new URL(decoded);
 
-  var name = url.searchParams.get("Name");
-  var email = url.searchParams.get("Email");
+  var name = url.searchParams.get("name");
+  var email = url.searchParams.get("email");
 
   var nameString = name.split(" ");
   var firstName = nameString[0];
