@@ -1,9 +1,8 @@
 function thankYou(){
 
+  window.history.replaceState(null, null, "?name=Alan%20Wellik&email=alanwellik%40gmail.com")
   var url_string = window.location.href;
-  var url_string_query = "?name=Alan%20Wellik&email=alanwellik%40gmail.com";
-  var url_string_final = url_string + url_string_query;
-  var decoded = decodeURI(url_string_final);
+  var decoded = decodeURI(url_string);
   var url = new URL(decoded);
 
   var name = url.searchParams.get("Name");
